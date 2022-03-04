@@ -1,0 +1,4 @@
+{
+  "DragMenu": "src/package/DragMenu/index.js",
+  "NavTab": "src/package/NavTab/index.js"
+}

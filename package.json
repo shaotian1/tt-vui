@@ -1,0 +1,62 @@
+{
+  "name": "tt-vui",
+  "version": "1.0.4",
+  "description": "vue-ui",
+  "main": "dist/tt-vui.umd.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config  build/webpack.dev.js --open",
+    "clear": "rimraf dist/*",
+    "build:file": "node build/bin/build-entry.js",
+    "build": "npm run clear && webpack --config build/webpack.prod.js"
+  },
+  "keywords": [
+    "component",
+    "vue",
+    "ui"
+  ],
+  "author": "zhangshaotian",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/generator": "^7.13.9",
+    "@babel/parser": "^7.13.13",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/traverse": "^7.13.13",
+    "@babel/types": "^7.13.14",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^3.5.2",
+    "eslint": "^8.10.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.5.0",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "json-templater": "^1.2.0",
+    "less": "^3.11.1",
+    "less-loader": "^5.0.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "prettier": "^2.5.1",
+    "pug": "^3.0.2",
+    "pug-html-loader": "^1.1.5",
+    "pug-plain-loader": "^1.1.0",
+    "rimraf": "^3.0.2",
+    "style-loader": "^1.1.4",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.1",
+    "vue-eslint-parser": "^7.6.0",
+    "vue-loader": "^15.9.1",
+    "vue-router": "^3.4.3",
+    "vue-style-loader": "^4.1.3",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.10"
+  },
+  "dependencies": {}
+}
