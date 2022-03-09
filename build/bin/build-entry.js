@@ -3,6 +3,7 @@ const { resolve } = require('path');
 const render = require('json-templater/string');
 const endOfLine = require('os').EOL;
 const components = require('../../components.json');
+const { log } = require('./utils');
 
 const OUTPUT_PATH = resolve(__dirname, '../../src/index.js');
 // eslint-disable-next-line prettier/prettier
@@ -63,4 +64,4 @@ const template = render(MAIN_TEMPLATE, {
 });
 
 fs.writeFileSync(OUTPUT_PATH, template);
-console.log('[build entry] DONE:', OUTPUT_PATH);
+log('[build entry] DONE: src/index.js');
