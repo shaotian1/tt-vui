@@ -17,4 +17,4 @@ exports.externals = {
   'vue-router': 'VueRouter',
 };
 
-exports.extensions = ['*', '.js', '.json', '.vue'];
+exports.extensions = ['*', '.js', '.vue', '.json'];
