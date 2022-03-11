@@ -4,19 +4,19 @@ const Webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const { output, alias, extensions, externals } = require('./config');
+const { output, alias, externals } = require('./config');
 
 module.exports = {
   mode: 'production',
   devtool: false,
   entry: resolve(__dirname, '../src/index.js'),
-  output: Object.assign(output, {
+  output: Object.assign({}, output, {
     filename: 'tt-vui.umd.js',
+    library: 'Tvui',
     libraryTarget: 'umd',
   }),
   resolve: {
     alias,
-    extensions,
   },
   externals,
   module: {

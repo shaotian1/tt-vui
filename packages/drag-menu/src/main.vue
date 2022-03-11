@@ -30,7 +30,7 @@ div(
 </template>
 
 <script>
-import MenuDrag from './drag';
+import MenuDrag from '../drag';
 
 export default {
   name: 'tt-drag-menu',

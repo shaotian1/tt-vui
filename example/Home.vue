@@ -1,20 +1,15 @@
 <template>
   <div class="home-root">
     home
-    <DragMenu left="400px" />
+    <!-- <tt-drag-menu left="400px" />
     <section class="nav-wrap">
-      <NavTab />
-    </section>
+      <tt-nav-tab />
+    </section> -->
   </div>
 </template>
 
 <script>
-import DragMenu from '@/packages/DragMenu/DragMenu';
-import NavTab from '@/packages/NavTab/NavTab';
-
-export default {
-  components: { DragMenu, NavTab },
-};
+export default {};
 </script>
 
 <style lang="less" scoped>

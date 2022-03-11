@@ -7,8 +7,10 @@ const { output, alias, extensions } = require('./config');
 module.exports = {
   mode: 'development',
   devtool: 'source-map',
-  entry: resolve(__dirname, '../base/main.js'),
-  output,
+  entry: resolve(__dirname, '../example/base/main.js'),
+  output: Object.assign({}, output, {
+    libraryTarget: 'umd',
+  }),
   resolve: {
     alias,
     extensions,
@@ -96,7 +98,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: resolve(__dirname, '../public/index.html'),
+      template: resolve(__dirname, '../example/public/index.html'),
     }),
     new VueLoaderPlugin(),
     new Webpack.HotModuleReplacementPlugin(),
