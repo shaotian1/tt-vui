@@ -10,6 +10,7 @@ exports.alias = {
   src: resolve(__dirname, '../src'),
   base: resolve(__dirname, '../base'),
   example: resolve(__dirname, '../example'),
+  packages: resolve(__dirname, '../packages'),
 };
 
 exports.externals = {

@@ -1,4 +1,5 @@
 const fs = require('fs');
+const uppercamelcase = require('uppercamelcase');
 const { resolve } = require('path');
 const render = require('json-templater/string');
 const endOfLine = require('os').EOL;
@@ -16,7 +17,7 @@ const components = [
 {{install}},
 ];
 
-const install = (Vue) => {
+const install = Vue => {
   components.forEach(component => {
     Vue.component(component.name, component);
   });
@@ -42,18 +43,18 @@ const listTemplate = [];
 componentNames.forEach(name => {
   includeComponentTemplate.push(
     render(IMPORT_TPL, {
-      name,
+      name: uppercamelcase(name),
       package: components[name],
     })
   );
 
   installTemplate.push(
     render(INSTALL_COMPONENT_TEMPLATE, {
-      name,
+      name: uppercamelcase(name),
     })
   );
 
-  listTemplate.push(`  ${name}`);
+  listTemplate.push(`  ${uppercamelcase(name)}`);
 });
 
 const template = render(MAIN_TEMPLATE, {

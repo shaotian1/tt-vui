@@ -1,12 +1,11 @@
 .vscode
 .DS_Store
-base
 build
 example
 node_modules
-public
 src
 .babelrc
 .eslintrc.js
 .prettierrc
 components.json
+Makefile
