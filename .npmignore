@@ -4,6 +4,8 @@ build
 example
 node_modules
 src
+packages
+types
 .babelrc
 .eslintrc.js
 .prettierrc
